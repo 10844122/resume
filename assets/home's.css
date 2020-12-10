@@ -1,0 +1,667 @@
+*{
+    margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/*背景圖片、字體*/
+.background{
+    background-image: url('../images/paper.jpg');
+    font-family: Comic Sans MS;
+}
+
+/*個人簡歷邊界*/
+.mama{
+    position: sticky;
+    top: 20px;
+    margin-left: 150px;
+}
+.margin{
+    float: left;
+}
+
+/*個人簡歷*/
+.me{
+    width: 250px;
+    height: 540px;
+    background-color: #e6dcd1;
+    border-radius: 10px;
+}
+
+/*個人簡歷的頭貼-排版*/
+.me_head{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*個人簡歷的頭貼*/
+.me_head_pic{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: all 0.6s;
+    margin: 20px;
+}
+.me_head_pic:hover{
+    transform: scale(1.1);
+}
+
+/*姓名*/
+.name{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 24pt;
+    color:#744b39 ;
+}
+
+/*生日.居住地.學校科系*/
+.data{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 12pt;
+    color:#683c28d2 ;
+}
+
+/*手繪小圓圈*/
+.ccf{
+    width: 64px;
+    height: 66px;
+    margin: 3px;
+}
+.cc{
+    width: 60px;
+    height: 60px;
+    margin: 3px;
+}
+.ttop{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.bbot{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/*DIV並排排版*/
+.div_type{
+    display: inline-block;
+    width: 550px;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+/*程式技能-框框*/
+.rabbit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Programming{
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: #a16a51 dashed 2px;
+    background-color:#e4dbd1 ;
+    padding: 5px;
+    color: #7a503d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*程式技能-中文字大小*/
+.chinese{
+    font-size: 15pt;
+}
+
+/*程式技能條-大小*/
+.skills {
+  padding: 10px;
+}
+
+/*C#/Java/Html/Css/Js-標題顏色、大小*/
+.subtitle{
+    color: #7a503d;
+    font-size: 12pt;
+}
+
+/*C#/Java/Html/Css/Js-標題距離*/
+.distance{
+    margin-bottom: 10px;
+}
+
+/*程式技能條-百分比與顏色*/
+
+@keyframes bar1 {
+    from {
+        border-left-width: 0px
+    }
+    to {
+        border-left-width: 470px
+    }
+}
+@keyframes bar2 {
+    from {
+        border-left-width: 0px
+    }
+    to {
+        border-left-width: 500px
+    }
+}
+@keyframes bar3 {
+    from {
+        border-left-width: 0px
+    }
+    to {
+        border-left-width: 450px
+    }
+}
+.C{
+    animation: bar1 2s ease;
+    border-left-width: 470px;
+    border-left-color: #EECFBB ;
+    border-left-style: solid;
+    background-color:#bdc2bb75;
+    border-radius: 20px;
+}
+    
+.Java {
+    animation: bar2 2s ease-out;
+    border-left-width: 500px;
+    border-left-color:#F6B99D;
+    border-left-style: solid;
+    background-color:#bdc2bb75;
+    border-radius: 20px;
+}
+.Html_Css_Js {
+    animation: bar3 2s ease-in;
+    border-left-width: 450px; 
+    border-left-color:#CB8A90;
+    border-left-style: solid;
+    background-color:#bdc2bb75;
+    border-radius: 20px;
+}
+
+/*專業技能*/
+.skill_div_type{
+    margin-top: 70px;
+}
+
+/*dance超連結底線消除*/
+.he{
+    text-decoration:none;
+}
+
+/*專業技能圈圈*/
+.div_type_circle{
+    display: inline-block;
+    width: 550px;
+    margin-left: 100px;
+}
+.baby{
+    margin: 0;
+    padding: 0;
+}
+.container_ciele{
+    position: relative;
+    width: 560px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.percent{
+    position: relative;
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+    z-index: 1000;
+}
+.percent .number{
+    position: absolute;
+    top:-6px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+
+
+.percent .number h3{
+    color:rgb(167, 167, 167);
+    font-weight: 700;
+    font-size: 40px;
+    transition: 0.5s;
+}
+.card:hover .percent .number h3{
+    color:rgb(92, 92, 92);
+    font-size: 60px;
+}
+.percent .number h3 span{
+    color:rgb(167, 167, 167);
+    font-size: 24px;
+}
+.card:hover .percent .number h3 span{
+    color:rgb(92, 92, 92);
+    transition: 0.5s;
+}
+
+.text{
+    position: relative;
+    color: rgb(167, 167, 167);
+    margin-top: 15px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card:hover .text{
+    color:rgb(92, 92, 92) ;
+}
+svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    z-index: 1000;
+}
+svg circle{
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: rgba(221, 221, 221, 0.712);/*圈圈底色*/
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px,5px);
+}
+
+
+svg circle:nth-child(2){
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+.card:nth-child(1) svg circle:nth-child(2){
+    stroke-dashoffset:calc( 440 - ( 440 * 90 ) / 100 );
+    stroke:#929ea1;
+}
+.card:nth-child(2) svg circle:nth-child(2){
+    stroke-dashoffset:calc( 440 - ( 440 * 80 ) / 100 );
+    stroke:#889183;
+}
+.card:nth-child(3) svg circle:nth-child(2){
+    stroke-dashoffset:calc( 440 - ( 440 * 75 ) / 100 );
+    stroke:#678ca0;
+}
+
+.div_clear{
+    clear: both;
+}
+
+a {
+    text-decoration:none;
+}
+
+.more{
+    color: rgba(146, 131, 104, 0.89);
+    background-color: rgba(248, 229, 194, 0.89);
+    border-radius: 10px;
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 27px;
+    transition: all 0.6s;
+}
+.more:hover{
+    color: rgba(248, 229, 194, 0.89);
+    background-color: rgba(146, 131, 104, 0.89);
+    border-radius: 10px;
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 27px;
+    transform: scale(1.05);
+}
+
+/*小生物*/
+.bio1{
+    position: relative;    
+    width: 156.5px;
+    height: 193.5px;
+    left: 460px;
+    top: -1162px;
+}
+.bio2{
+    position: relative;    
+    width: 216px;
+    height: 99px;
+    left: 420px;
+    top: -900px;
+}
+.bio3{
+    position: relative;    
+    width: 105.5px;
+    height: 191.5px;
+    left: -342px;
+    top: -278px;
+}
+/*時間軸*/
+*{
+    box-sizing: border-box;
+}
+
+  /*時間軸（垂直標尺）*/
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+  
+  /*時間軸（垂直標尺）*/
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 190px;
+    left: 50%;
+    margin-left: -3px;
+}
+  
+  /*內容容器*/
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+.container2 {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+  
+  /*時間線上的圓圈*/
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color:white;
+    border: 4px solid #c9ba9b;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+.container2::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -16px;
+    background-color:white;
+    border: 4px solid #c9ba9b;
+    top: -184px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+  
+  /*將容器放在左側*/
+.left {
+    left: 0;
+}
+  
+  /*將容器放在右邊 */
+.right {
+    left: 50%;
+}
+  
+  /*在左側容器中添加箭頭（指向右側）*/
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid #e8e7d2;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #e8e7d2;
+}
+.left2::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: -178px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid #e8e7d2;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #e8e7d2;
+}
+.left3::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid #e8e7d2;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #e8e7d2;
+}
+  
+  /*將箭頭添加到右側容器（指向左側） */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: -178px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #e8e7d2;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #e8e7d2 transparent transparent;
+}
+  
+  /*在右側固定容器的圓圈 */
+.right::after {
+    left: -16px;
+    top: -185px;
+  }
+  
+  /*實際內容*/
+.content {
+    padding: 20px 20px;
+    margin-left: -75px;
+    background-color:#e8e7d2;
+    position: relative;
+    border-radius: 6px;
+}
+.content_r1 {
+    padding: 20px 20px;
+    margin-left: 0px;
+    margin-right: -76px;
+    margin-top: -200px;
+    background-color:#e8e7d2;
+    position: relative;
+    border-radius: 6px;
+}
+.content_l1{
+    padding: 20px 20px;
+    margin-left: -75px;
+    margin-right: 0px;
+    margin-top: -200px;
+    background-color:#e8e7d2;
+    position: relative;
+    border-radius: 6px;
+}
+.content_r2 {
+    padding: 20px 20px;
+    margin-left: 0px;
+    margin-right: -76px;
+    margin-top: -200px;
+    background-color:#e8e7d2;
+    position: relative;
+    border-radius: 6px;
+}
+
+  
+  /*媒體查詢-屏幕寬度小於600像素的自適應時間軸*/
+@media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+    left: 31px;
+}
+    
+    /*全寬容器*/
+.container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+}
+    
+    /*確保所有箭頭都指向左*/
+.container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+  
+    /*確保所有圈子都在同一地點*/
+.left::after, .right::after {
+    left: 15px;
+}
+    
+    /*使所有正確的容器表現得像左側的容器一樣*/
+.right {
+    left: 0%;
+}
+
+}
+
+/*時間軸圖片特效*/
+.screen {
+    position: relative;
+}
+.screen img {
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+}
+.screen img:nth-of-type(2):hover {
+    opacity: 0;
+}
+
+/*時間軸圖片大小*/
+.enterprise{
+    width: 230px;
+    height: 230px;
+}
+
+/*時間軸標題字*/
+.mac{
+    margin-bottom: 8px;
+    color: #504f45;
+}
+
+/*工作標題*/
+.job{
+    margin-top: -105px;
+}
+
+/*公司名稱*/
+.company{
+    color: white;
+    background-color:#c2bdb4e3;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 16pt;
+    margin-right: 15px;
+    transition: all 0.6s;
+}
+.company:hover{
+    color: rgb(110, 109, 109);
+    background-color:#c2bdb4e3;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 16pt;
+    font-weight: bold;
+    margin-right: 15px;
+    transform: scale(1.1);
+}
+
+/*公司內容*/
+.dodo{
+    
+    color: rgb(70, 59, 59);
+    background-color:#e2d8c1a9;
+    border-radius: 10px;
+    border: dotted 3px #c2bdb4e3;
+    padding: 15px;
+    font-size: 12pt;
+    transition: all 0.6s;
+}
+.dodo:hover{
+    color: rgb(70, 59, 59);
+    background-color:#f3e6c99d;
+    border-radius: 10px;
+    border: dotted 3px #7c7972e3;
+    padding: 15px;
+    font-size: 12pt;
+    transform: scale(1.03);
+}
+
+/*工作排版*/
+.www{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+/*公司照片*/
+.hu{
+    width: 188.96px;
+    height: 90.4px;
+    float: right;
+    margin-left: 5px;
+    margin-bottom: -2px;
+    margin-top: -10px;
+}
+
+.huuu{
+    width: 201.6px;
+    height: 63.7px;
+    float: right;
+    margin-left: 11px;
+    margin-bottom: 3px;
+}

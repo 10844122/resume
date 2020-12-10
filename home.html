@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel=stylesheet type="text/css" href="assets/home's.css">
+
+    <script language="JavaScript">
+
+        // 圖片陣列
+        var imgArray = new Array('images/lea.png', 'images/mr.png', 'images/ear.png', 'images/yuki.png');
+
+        // 圖片計數
+        var count = 0;
+
+        function showimage(sAction) {
+
+            //判斷如果點選pre則圖片計數-1 反之next則圖片計數+1
+            if (sAction == "pre") {
+                count--;
+            }
+            else {
+                count++;
+            }
+
+            //若計數超過陣列長度則回到0
+            if (count >= imgArray.length) {
+                count = 0;
+            }
+            else if (count < 0) {
+                count = imgArray.length - 1;
+            }
+            imgarea.src = imgArray[count];
+        }
+
+        //隱藏Table
+        function hide() {
+            var result_style = document.getElementById('dyn').style;
+            result_style.display = 'none';
+        }
+        //顯示Table
+        function show() {
+            var result_style = document.getElementById('dyn').style;
+            result_style.display = 'table-row';
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <!--背景設定-->
+    <div class="background">
+        <!--個人簡介(頭)-->
+        <div class="mama">
+            <div class="margin">
+                <div class="me">
+                    <div class="me_head">
+                        <img title="Hello World!" class="me_head_pic" src="images/me.jpg">
+                    </div>
+                    <h3 class="name" title="Hello World!">藍悅娜</h3>
+                    <h3 class="data">2000/10/01</h3>
+                    <h3 class="data">Taoyuan,Taiwan</h3>
+                    <h3 class=" data">CYIM</h3>
+                    <div class="ttop">
+                        <div class="bbot">
+                            <a href="https://www.facebook.com/cathycatloveyou" target="_blank">
+                                <img class="ccf" src="images/FB.png">
+                            </a>
+                            <a href="https://www.instagram.com/yue.nuo/" target="_blank">
+                                <img class="cc" src="images/IG.png">
+                            </a>
+                            <a href="https://line.me/ti/p/U4nU-ppBy2" target="_blank">
+                                <img class="cc" src="images/LINE.png">
+                            </a>
+                        </div>
+                        <div class="bbot">
+                            <a href="tel:+886-978127638" target="_blank">
+                                <img class="cc" src="images/call.png">
+                            </a>
+                            <a href="mailto:cathycatloveyou0978127638@gmail.com" target="_blank">
+                                <img class="cc" src="images/mail.png">
+                            </a>
+                            <a href="https://github.com/10844122?tab=repositories" target="_blank">
+                                <img class="cc" src="images/github.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--個人簡介(尾)-->
+        <!--右邊排版(頭)-->
+        <div class="div_type">
+            <!--程式技能標頭(頭)-->
+            <div class="rabbit">
+                <div class="Programming">
+                    <h3 class="chinese">程式 Program</h3>
+                </div>
+            </div>
+            <!--程式技能標題(尾)-->
+            <!--程式技能條(頭)-->
+            <div class="distance">
+                <h3 class="subtitle">C#</h3>
+                <div>
+                    <div class="skills C"></div>
+                </div>
+            </div>
+            <div class="distance">
+                <h3 class="subtitle">Java</h3>
+                <div>
+                    <div class="skills Java"></div>
+                </div>
+            </div>
+            <div class="distance">
+                <h3 class="subtitle">Html/Css/Js</h3>
+                <div>
+                    <div class="skills Html_Css_Js"></div>
+                </div>
+            </div>
+            <!--程式技能條(尾)-->
+            <!--專業技能標題(頭)-->
+            <div class="skill_div_type">
+                <div class="rabbit">
+                    <div class="Programming">
+                        <h3 class="chinese">專業技能 Skill</h3>
+                    </div>
+                </div>
+            </div>
+            <!--專業技能標題(尾)-->
+            <!--專業技能圈圈(頭)-->
+
+
+            <!--神奇相簿-->
+            <style>
+                #target {
+                    position: absolute;
+                    left: 50px;
+                    top: 100px;
+                    background-color: transparent;
+                    z-index: 9999;
+                }
+            </style>
+            <div id="target">
+                <table border="0" class="grayborder" id="dyn" style="display: none;">
+                    <tr>
+                        <td style="font-size: x-large">
+                            <p align="center">
+                                <a href="javascript:showimage('pre')">
+                                    < </a>
+                        </td>
+
+                        <td width="450">
+                            <p align="center">
+                                <img src="images/lea.png" height="600" id="imgarea" onclick="hide()">
+                        </td>
+
+                        <td style="font-size: x-large">
+                            <p align="center">
+                                <a href="javascript:showimage('next')">> </a>
+                        </td>
+
+                    </tr>
+
+                </table>
+            </div>
+            <!---->
+
+            <div class="baby">
+                <div class="container_ciele">
+                    <!--第一個圈(頭)-->
+                    <div class="card">
+                        <div class="box">
+                            <div class="percent">
+                                <svg>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                </svg>
+                                <div class="number">
+                                    <h3>90<span>%</span></h3>
+                                </div>
+                            </div>
+                            <h3 class="text he">Keep a Pet<br><br></h3>
+                            <a href="javascript:show()">
+                                <h3 class="more" title="點我看更多(♡˙︶˙♡)">⇨ More ⇦</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <!--第一個圈(尾)-->
+                    <!--第二個圈(頭)-->
+                    <div class="card">
+                        <div class="box">
+                            <div class="percent">
+                                <svg>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                </svg>
+                                <div class="number">
+                                    <h3>80<span>%</span></h3>
+                                </div>
+                            </div>
+                            <h3 class="text">Dance<br><br></h3>
+                            <a class="he" href="https://www.youtube.com/channel/UCSkVjSgBaZphkcI-Zw6AJZQ/videos"
+                                target="_blank">
+                                <h3 class="more" title="點我看更多(*´д`)~♥">⇨ More ⇦</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <!--第二個圈(尾)-->
+                    <!--第三個圈(頭)-->
+                    <div class="card">
+                        <div class="box">
+                            <div class="percent">
+                                <svg>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                </svg>
+                                <div class="number">
+                                    <h3>75<span>%</span></h3>
+                                </div>
+                            </div>
+                            <h3 class="text">Dessert<br><br></h3>
+                            <a class="he"
+                                href="https://drive.google.com/file/d/1tLKM_r12SJHjWz_6ji8DehF1k1XOSyl6/view?usp=sharing"
+                                target="_blank">
+                                <h3 class="more" title="點我看更多(´▽`ʃ♡ƪ)">⇨ More ⇦</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <!--第三個圈(尾)-->
+                </div>
+            </div>
+            <!--專業技能圈圈(尾)-->
+            <!--專案標題(頭)-->
+            <div class=" skill_div_type">
+                <div class="rabbit">
+                    <div class="Programming">
+                        <h3 class="chinese">專案 Project</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!--專案標題(尾)-->
+
+            <!--專案時間軸(頭)-->
+
+            <div class="timeline">
+                <div class="container left">
+                    <div class="content">
+                        <h3 class="mac">企業概論-蜜豐糖脆蛋糕</h3>
+                        <div>
+                            <div class="screen">
+                                <img class="enterprise" src="images/en.png">
+                                <img class="enterprise" src="images/en2.png" style="position: absolute;top:0;left: 0;">
+                            </div>
+                        </div>
+                        <p>
+                        <div>2019/9-2020/1</div>
+                        這是一門以「義賣」學習企業經營的課程，雖然是大一的魔王課程，但讓我在處理文書和上台報告都獲益良多，也了解真正的學用合一是什麼意思。
+                        </p>
+                    </div>
+                </div>
+                <div class="container right">
+                    <div class="content_r1">
+                        <h3 class="mac">管理學-志工服務學習</h3>
+                        <div>
+                            <div class="screen">
+                                <img class="enterprise" src="images/ele.png">
+                                <img class="enterprise" src="images/ele2.png" style="position: absolute;top:0;left: 0;">
+                            </div>
+                        </div>
+                        <p>
+                        <div>2020/3-2020/6</div>
+                        這段時間是「新冠肺炎」正嚴重的時候，我們準備了一份投影片向小學生宣導防疫觀念，在教學影片和實作的方式下，小朋友們都對正確的洗手有更深的認識。
+                        </p>
+                    </div>
+                </div>
+                <div class="container2 left2">
+                    <div class="content_l1">
+                        <h3 class="mac">多媒體程式設計-CYIM</h3>
+                        <div>
+                            <div class="screen">
+                                <img class="enterprise" src="images/page.png">
+                                <img class="enterprise" src="images/page2.png"
+                                    style="position: absolute;top:0;left: 0;">
+                            </div>
+                        </div>
+                        <p>
+                        <div>2020/11</div>
+                        人生中第一個網頁，在組員的互助合作下，我們一同完成了介紹中原大學資管系的網頁。原本連div是什麼都不知道，後來在助教的細心教學下，終於完成。
+                        </p>
+                    </div>
+                </div>
+                <div class="container right">
+                    <div class="content_r2">
+                        <h3 class="mac">資料結構-Unity小遊戲</h3>
+                        <div>
+                            <div class="screen">
+                                <img class="enterprise" src="images/play.png">
+                                <img class="enterprise" src="images/play2.png"
+                                    style="position: absolute;top:0;left: 0;">
+                            </div>
+                        </div>
+                        <p>
+                        <div>2020/11</div>
+                        第一次使用Unity製作小遊戲，這是一款雙人射擊遊戲，除了可以操縱角色發射子彈，還有動態的「子彈寶箱」能拿取不同樣式的子彈。
+                        </p>
+                    </div>
+                </div>
+                <!--小生物(頭)-->
+                <img class="bio1" src="images/bio1.png">
+                <img class="bio2" src="images/bio2.png">
+                <img class="bio3" src="images/bio3.png">
+                <!--小生物(尾)-->
+                <!--專案時間軸(尾)-->
+            </div>
+            <!--工作經驗(頭)-->
+            <div class="job">
+                <div class="rabbit">
+                    <div class="Programming">
+                        <h3 class="chinese">工作經驗 Job</h3>
+                    </div>
+                </div>
+            </div>
+            <!--工作經驗(尾)-->
+            <!--工作經驗-內容(頭)-->
+            <div>
+                <div class="www">
+                    <div class="company">
+                        宏亞食品公司
+                    </div>
+                    <p class="dodo">
+                        <img class="hu" src="images/hunya.jpg">
+                        2019/7~8<br>
+                        高三畢業後的暑假，我到宏亞食品公司打工，這次的經驗打破我對生產線的印象，機器化程度其實不高，就是一條可調速輸送帶加上包裝機，其他內襯或乾燥劑都要人手動去放置，包裝機也時常出問題，要有人一直顧著，不然可能會把月餅壓壞，原來製作一盒月餅的人事成本蠻高的。這次的經驗讓我了解到賺錢是如此的不容易，也讓我更珍惜在校學習的時間，希望以此增進自己的實力，嘗試更多不同的工作。
+                    </p>
+                </div>
+                <div class="www">
+                    <div class="company">
+                        環工系工讀生
+                    </div>
+                    <p class="dodo">
+                        <img class="huuu" src="images/cycu-removebg-preview.png">
+                        2020/7~Now<br>
+                        大一下期末前，學姐推薦我可以去環工系應徵工讀生，於是我在暑假面試成功，開始校內工讀的生活。除了招待來賓，也會做一些文件的整理，我對excel的了解甚少，但系上許多資料都需要使用excel，在助教細心教導下，我對此軟體的使用越來越清楚，很開心能夠在工作中學到實用的技能。有時，我會作為校方和環工系上聯繫的人員，發現原來要申請一筆費用、或是購買一些系上消耗品，都要多次公文的往來才能拿到，深深了解到行政人員的辛苦。
+
+                    </p>
+                </div>
+            </div>
+            <!--工作經驗-內容(尾)-->
+        </div>
+        <!--右邊排版(尾)-->
+        <!--清除float-->
+        <!-- <div class="div_clear"></div> -->
+        <!--清除float(尾)-->
+    </div>
+    <!--背景設定-->
+</body>
+
+</html>
